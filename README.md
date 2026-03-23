@@ -1,6 +1,6 @@
 # Papertrail
 
-![Project logo](https://github.com/NASA-JPL-Teamtools-Studio/teamtools-documentation/blob/main/docs/images/tts_image_artifacts/papertrail.png)
+![Project logo](https://github.com/NASA-JPL-Teamtools-Studio/teamtools_documentation/blob/main/docs/images/tts_image_artifacts/papertrail.png)
 
 ## About Teamtools Studio
 
