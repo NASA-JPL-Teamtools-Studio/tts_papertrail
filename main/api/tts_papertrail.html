@@ -1,0 +1,489 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tts_papertrail &mdash; tts-papertrail 0.4.2.dev0+gec13b8fc0.d20260323 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/bugfix.css?v=aa86f000" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=66a3a9c8"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="tts-papertrail" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            tts-papertrail
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">tts_papertrail</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-tts_papertrail.base">tts_papertrail.base</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tts_papertrail.base.Entry"><code class="docutils literal notranslate"><span class="pre">Entry</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tts_papertrail.base.ListEntry"><code class="docutils literal notranslate"><span class="pre">ListEntry</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tts_papertrail.base.ListItem"><code class="docutils literal notranslate"><span class="pre">ListItem</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tts_papertrail.base.PowerTableEntry"><code class="docutils literal notranslate"><span class="pre">PowerTableEntry</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tts_papertrail.base.Report"><code class="docutils literal notranslate"><span class="pre">Report</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tts_papertrail.base.RichText"><code class="docutils literal notranslate"><span class="pre">RichText</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tts_papertrail.base.SectionEntry"><code class="docutils literal notranslate"><span class="pre">SectionEntry</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tts_papertrail.base.SummaryTable"><code class="docutils literal notranslate"><span class="pre">SummaryTable</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tts_papertrail.base.TableEntry"><code class="docutils literal notranslate"><span class="pre">TableEntry</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tts_papertrail.base.TextEntry"><code class="docutils literal notranslate"><span class="pre">TextEntry</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-tts_papertrail.excelerate">tts_papertrail.excelerate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tts_papertrail.excelerate.ExcelReport"><code class="docutils literal notranslate"><span class="pre">ExcelReport</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tts-papertrail-hypersonic">tts_papertrail.hypersonic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-tts_papertrail.slidekick">tts_papertrail.slidekick</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tts_papertrail.slidekick.PowerPointReport"><code class="docutils literal notranslate"><span class="pre">PowerPointReport</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tts_papertrail.slidekick.hex_to_rgb"><code class="docutils literal notranslate"><span class="pre">hex_to_rgb()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-tts_papertrail.wordsmith">tts_papertrail.wordsmith</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tts_papertrail.wordsmith.WordReport"><code class="docutils literal notranslate"><span class="pre">WordReport</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tts_papertrail.wordsmith.hex_to_rgb"><code class="docutils literal notranslate"><span class="pre">hex_to_rgb()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">tts-papertrail</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">tts_papertrail</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-tts_papertrail">
+<span id="tts-papertrail"></span><h1>tts_papertrail<a class="headerlink" href="#module-tts_papertrail" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+<section id="module-tts_papertrail.base">
+<span id="tts-papertrail-base"></span><h3>tts_papertrail.base<a class="headerlink" href="#module-tts_papertrail.base" title="Link to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="tts_papertrail.base.Entry">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">tts_papertrail.base.</span></span><span class="sig-name descname"><span class="pre">Entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_papertrail.base.Entry" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>Abstract base class for all report sections.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><dl class="simple">
+<dt>title (Optional[str]): The title of this section. Usage varies by renderer</dt><dd><p>(e.g., Worksheet name in Excel, Slide Title in PPT).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tts_papertrail.base.ListEntry">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">tts_papertrail.base.</span></span><span class="sig-name descname"><span class="pre">ListEntry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">items</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#tts_papertrail.base.ListItem" title="tts_papertrail.base.ListItem"><span class="pre">ListItem</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_papertrail.base.ListEntry" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tts_papertrail.base.Entry" title="tts_papertrail.base.Entry"><code class="xref py py-class docutils literal notranslate"><span class="pre">Entry</span></code></a></p>
+<p>Represents a hierarchical (nested) list.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><p>items (List[ListItem]): The sequence of list items.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="tts_papertrail.base.ListEntry.from_html">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">from_html</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">html_string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#tts_papertrail.base.ListEntry" title="tts_papertrail.base.ListEntry"><span class="pre">ListEntry</span></a></span></span><a class="headerlink" href="#tts_papertrail.base.ListEntry.from_html" title="Link to this definition"></a></dt>
+<dd><p>Parses an HTML &lt;ul&gt; or &lt;ol&gt; into a hierarchical ListEntry.</p>
+<p>Handles nested lists by recursively calculating the indentation level.
+Preserves formatting (bold, color) within the list items.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>title (Optional[str]): The title for the list entry.
+html_string (str): The HTML string containing &lt;ul&gt; or &lt;ol&gt; tags.</p>
+</dd>
+<dt>Returns:</dt><dd><p>ListEntry: The populated list entry.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tts_papertrail.base.ListItem">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">tts_papertrail.base.</span></span><span class="sig-name descname"><span class="pre">ListItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#tts_papertrail.base.RichText" title="tts_papertrail.base.RichText"><span class="pre">RichText</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_papertrail.base.ListItem" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Helper class for ListEntry representing a single bullet point.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><p>level (int): The indentation level (0-based).
+content (List[RichText]): The text content of the list item.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tts_papertrail.base.PowerTableEntry">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">tts_papertrail.base.</span></span><span class="sig-name descname"><span class="pre">PowerTableEntry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">container</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_filters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_sorting</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_papertrail.base.PowerTableEntry" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tts_papertrail.base.Entry" title="tts_papertrail.base.Entry"><code class="xref py py-class docutils literal notranslate"><span class="pre">Entry</span></code></a></p>
+<p>Represents a table backed by a DataContainer with power_table() support.</p>
+<p>This enables interactive HTML tables with filtering, sorting, and rich disposition
+styling when rendered with HypersonicReport. For other formats (Excel, Word, PPT),
+the data is extracted from the container.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><p>container (DataContainer): A DataContainer object (e.g., EhaContainer, EvrContainer).
+columns (Optional[List[str]]): List of column names to include. If None, uses all repr_cols.
+add_filters (bool): Enable client-side filtering in HTML output.
+add_sorting (bool): Enable client-side sorting in HTML output.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tts_papertrail.base.Report">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">tts_papertrail.base.</span></span><span class="sig-name descname"><span class="pre">Report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">author</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_papertrail.base.Report" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A unified report builder that can export to multiple formats.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><p>name (str): The name of the report.
+author (str): The author’s name.
+created_at (datetime): The UTC timestamp of creation.
+entries (List[Entry]): The ordered list of content entries.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="tts_papertrail.base.Report.add_entry">
+<span class="sig-name descname"><span class="pre">add_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entry</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#tts_papertrail.base.Entry" title="tts_papertrail.base.Entry"><span class="pre">Entry</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_papertrail.base.Report.add_entry" title="Link to this definition"></a></dt>
+<dd><p>Adds a content entry to the report.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tts_papertrail.base.Report.to_excel">
+<span class="sig-name descname"><span class="pre">to_excel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_papertrail.base.Report.to_excel" title="Link to this definition"></a></dt>
+<dd><p>Exports the report to Excel format.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>filename (str): Output filename (will append .xlsx if missing).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tts_papertrail.base.Report.to_html">
+<span class="sig-name descname"><span class="pre">to_html</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_papertrail.base.Report.to_html" title="Link to this definition"></a></dt>
+<dd><p>Exports the report to HTML format.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>filename (str): Output filename (will append .html if missing).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tts_papertrail.base.Report.to_powerpoint">
+<span class="sig-name descname"><span class="pre">to_powerpoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_papertrail.base.Report.to_powerpoint" title="Link to this definition"></a></dt>
+<dd><p>Exports the report to PowerPoint format.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>filename (str): Output filename (will append .pptx if missing).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tts_papertrail.base.Report.to_word">
+<span class="sig-name descname"><span class="pre">to_word</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_papertrail.base.Report.to_word" title="Link to this definition"></a></dt>
+<dd><p>Exports the report to Word format.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>filename (str): Output filename (will append .docx if missing).</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tts_papertrail.base.RichText">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">tts_papertrail.base.</span></span><span class="sig-name descname"><span class="pre">RichText</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">italic</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bg_color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_papertrail.base.RichText" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The atomic unit of style for Papertrail reports.</p>
+<p>This class represents a span of text with specific formatting attributes 
+(bold, italic, color). It serves as a universal intermediate representation 
+that can be translated into Excel formats, Word runs, PowerPoint runs, or HTML spans.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><p>text (str): The actual text content.
+bold (bool): Whether the text is bold.
+italic (bool): Whether the text is italicized.
+color (Optional[str]): Hex color code (e.g., “#FF0000”).
+bg_color (Optional[str]): Hex color code for the background (highlighting).
+url (Optional[str]): A hyperlink URL (if applicable).</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="tts_papertrail.base.RichText.from_html">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">from_html</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">html_fragment</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#tts_papertrail.base.RichText" title="tts_papertrail.base.RichText"><span class="pre">RichText</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#tts_papertrail.base.RichText.from_html" title="Link to this definition"></a></dt>
+<dd><p>Parses a raw HTML string into a list of RichText objects.</p>
+<p>This is a “best-effort” parser designed to ingest HTML reports from other tools.
+It supports basic tags (&lt;b&gt;, &lt;i&gt;, &lt;strong&gt;, &lt;em&gt;) and inline CSS for 
+bold, italic, and hex color codes.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>html_fragment (str): The HTML string to parse.</p>
+</dd>
+<dt>Returns:</dt><dd><p>List[RichText]: The sequence of styled text objects.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tts_papertrail.base.SectionEntry">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">tts_papertrail.base.</span></span><span class="sig-name descname"><span class="pre">SectionEntry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#tts_papertrail.base.Entry" title="tts_papertrail.base.Entry"><span class="pre">Entry</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_papertrail.base.SectionEntry" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tts_papertrail.base.Entry" title="tts_papertrail.base.Entry"><code class="xref py py-class docutils literal notranslate"><span class="pre">Entry</span></code></a></p>
+<p>A container for grouping multiple entries together.</p>
+<p>This is useful for keeping related content (e.g., a preamble paragraph and 
+a list) visually grouped.
+- PowerPoint: Renders all parts on a single slide.
+- Excel: Stacks all parts on a single worksheet.
+- Word: Renders parts sequentially under one heading.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><p>parts (List[Entry]): The list of child entries (TextEntry, ListEntry, etc.).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tts_papertrail.base.SummaryTable">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">tts_papertrail.base.</span></span><span class="sig-name descname"><span class="pre">SummaryTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_papertrail.base.SummaryTable" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tts_papertrail.base.Entry" title="tts_papertrail.base.Entry"><code class="xref py py-class docutils literal notranslate"><span class="pre">Entry</span></code></a></p>
+<p>A summary table for collecting test/check results.</p>
+<p>This entry type is designed to accumulate rows of summary information,
+typically used for high-level status reporting.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><dl class="simple">
+<dt>rows (List[dict]): The accumulated summary rows, each containing:</dt><dd><ul class="simple">
+<li><p>category (str): The category or type of check</p></li>
+<li><p>status (str): The overall status</p></li>
+<li><p>message (str): A descriptive message</p></li>
+<li><p>disposition_summary (str): Summary of dispositions</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="tts_papertrail.base.SummaryTable.add_to_summary_table">
+<span class="sig-name descname"><span class="pre">add_to_summary_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disposition_summary</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_papertrail.base.SummaryTable.add_to_summary_table" title="Link to this definition"></a></dt>
+<dd><p>Adds a row to the summary table.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>category (str): The category or type of check
+status (str): The overall status (e.g., “PASS”, “FAIL”, “WARNING”)
+message (str): A descriptive message
+disposition_summary (str): Summary of dispositions</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tts_papertrail.base.TableEntry">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">tts_papertrail.base.</span></span><span class="sig-name descname"><span class="pre">TableEntry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">headers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_papertrail.base.TableEntry" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tts_papertrail.base.Entry" title="tts_papertrail.base.Entry"><code class="xref py py-class docutils literal notranslate"><span class="pre">Entry</span></code></a></p>
+<p>Represents a 2D grid of data.</p>
+<dl>
+<dt>Attributes:</dt><dd><dl class="simple">
+<dt>data (List[List[Any]]): 2D list of cell data. Cells can be strings, </dt><dd><p>numbers, or RichText objects.</p>
+</dd>
+</dl>
+<p>headers (Optional[List[str]]): List of column headers.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tts_papertrail.base.TextEntry">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">tts_papertrail.base.</span></span><span class="sig-name descname"><span class="pre">TextEntry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#tts_papertrail.base.RichText" title="tts_papertrail.base.RichText"><span class="pre">RichText</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#tts_papertrail.base.RichText" title="tts_papertrail.base.RichText"><span class="pre">RichText</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_papertrail.base.TextEntry" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tts_papertrail.base.Entry" title="tts_papertrail.base.Entry"><code class="xref py py-class docutils literal notranslate"><span class="pre">Entry</span></code></a></p>
+<p>Represents a block of text, which may contain multiple paragraphs or styling.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><p>content (List[Union[str, RichText]]): The textual content.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-tts_papertrail.excelerate">
+<span id="tts-papertrail-excelerate"></span><h3>tts_papertrail.excelerate<a class="headerlink" href="#module-tts_papertrail.excelerate" title="Link to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="tts_papertrail.excelerate.ExcelReport">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">tts_papertrail.excelerate.</span></span><span class="sig-name descname"><span class="pre">ExcelReport</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">author</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_papertrail.excelerate.ExcelReport" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Renders reports to Microsoft Excel (.xlsx) files using <cite>xlsxwriter</cite>.</p>
+<p>Idiomatic Features:
+- <strong>Worksheets:</strong> Each TableEntry generally gets its own worksheet.
+- <strong>Header Formatting:</strong> Headers are automatically frozen (freeze_panes) and styled.
+- <strong>Rich Text:</strong> RichText objects are converted to cell formats. Multiple styles</p>
+<blockquote>
+<div><p>within a single cell are supported via <cite>write_rich_string</cite>.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Sanitization:</strong> Enforces Excel’s 31-character sheet name limit and removes illegal characters.</p></li>
+</ul>
+<dl class="py method">
+<dt class="sig sig-object py" id="tts_papertrail.excelerate.ExcelReport.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_papertrail.excelerate.ExcelReport.save" title="Link to this definition"></a></dt>
+<dd><p>Generates the .xlsx file.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>filename (str): Output filename. Appends .xlsx if missing.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="tts-papertrail-hypersonic">
+<h3>tts_papertrail.hypersonic<a class="headerlink" href="#tts-papertrail-hypersonic" title="Link to this heading"></a></h3>
+</section>
+<section id="module-tts_papertrail.slidekick">
+<span id="tts-papertrail-slidekick"></span><h3>tts_papertrail.slidekick<a class="headerlink" href="#module-tts_papertrail.slidekick" title="Link to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="tts_papertrail.slidekick.PowerPointReport">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">tts_papertrail.slidekick.</span></span><span class="sig-name descname"><span class="pre">PowerPointReport</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">author</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_papertrail.slidekick.PowerPointReport" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Renders reports to PowerPoint (.pptx) files using <cite>python-pptx</cite>.</p>
+<p>Idiomatic Features:
+- <strong>One Entry per Slide:</strong> Generally maps one entry to one slide.
+- <strong>Table Pagination:</strong> Automatically splits long tables across multiple slides</p>
+<blockquote>
+<div><p>to prevent overflow, adding “(m/n)” to the titles.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><strong>Sections:</strong> Groups <cite>SectionEntry</cite> content onto a single “Title and Content” slide.</p></li>
+<li><p><strong>Overflow Warning:</strong> Logs warnings if content might exceed slide boundaries.</p></li>
+</ul>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tts_papertrail.slidekick.PowerPointReport.MAX_ROWS_PER_SLIDE">
+<span class="sig-name descname"><span class="pre">MAX_ROWS_PER_SLIDE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">12</span></span><a class="headerlink" href="#tts_papertrail.slidekick.PowerPointReport.MAX_ROWS_PER_SLIDE" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tts_papertrail.slidekick.PowerPointReport.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_papertrail.slidekick.PowerPointReport.save" title="Link to this definition"></a></dt>
+<dd><p>Generates the .pptx file.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>filename (str): Output filename. Appends .pptx if missing.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tts_papertrail.slidekick.hex_to_rgb">
+<span class="sig-prename descclassname"><span class="pre">tts_papertrail.slidekick.</span></span><span class="sig-name descname"><span class="pre">hex_to_rgb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hex_str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_papertrail.slidekick.hex_to_rgb" title="Link to this definition"></a></dt>
+<dd><p>Helper: Converts hex string to python-pptx RGBColor object.</p>
+</dd></dl>
+
+</section>
+<section id="module-tts_papertrail.wordsmith">
+<span id="tts-papertrail-wordsmith"></span><h3>tts_papertrail.wordsmith<a class="headerlink" href="#module-tts_papertrail.wordsmith" title="Link to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="tts_papertrail.wordsmith.WordReport">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">tts_papertrail.wordsmith.</span></span><span class="sig-name descname"><span class="pre">WordReport</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">author</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_papertrail.wordsmith.WordReport" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Renders reports to Microsoft Word (.docx) files using <cite>python-docx</cite>.</p>
+<p>Idiomatic Features:
+- <strong>Page Breaks:</strong> Automatically inserts page breaks between top-level entries.
+- <strong>Styling:</strong> Uses standard Word styles (‘List Bullet’, ‘Table Grid’).
+- <strong>Indentation:</strong> Simulates nested list indentation using paragraph indentation properties.
+- <strong>Sections:</strong> Renders SectionEntry children sequentially under a main heading.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tts_papertrail.wordsmith.WordReport.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_papertrail.wordsmith.WordReport.save" title="Link to this definition"></a></dt>
+<dd><p>Generates the .docx file.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>filename (str): Output filename. Appends .docx if missing.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tts_papertrail.wordsmith.hex_to_rgb">
+<span class="sig-prename descclassname"><span class="pre">tts_papertrail.wordsmith.</span></span><span class="sig-name descname"><span class="pre">hex_to_rgb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hex_str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tts_papertrail.wordsmith.hex_to_rgb" title="Link to this definition"></a></dt>
+<dd><p>Helper: Converts hex string to python-docx RGBColor object.</p>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="tts-papertrail" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026 JPL.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
