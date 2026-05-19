@@ -20,6 +20,7 @@ dependencies = [
     "python-docx",
     "python-pptx",
     "xlsxwriter",
+    "tts-data-utils>=0.7.4,<1.0.0",
     "tts-html-utils>=0.4.0,<1.0.0",
 ]
 dynamic = ["version"]
